@@ -35,3 +35,9 @@ Developers can start with [the developer tutorials](https://www.odoo.com/documen
 
 If you believe you have found a security issue, check our [Responsible Disclosure page](https://www.odoo.com/security-report)
 for details and get in touch with us via email.
+
+## Contributing
+
+Before opening a pull request, read the [Odoo contribution guidelines](https://github.com/odoo/odoo/wiki/Contributing) and follow the recommendations in `CONTRIBUTING.md` in this repository.
+
+For the **16 Digit Float Precision** add-on, see the module page on Odoo Apps: [ica_16_digit (18.0)](https://apps.odoo.com/apps/modules/18.0/ica_16_digit). For development targeting the next version, prepare your changes on the **19.0 branch** and submit the PR against that branch.

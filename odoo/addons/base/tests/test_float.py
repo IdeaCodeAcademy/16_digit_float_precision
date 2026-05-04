@@ -215,6 +215,17 @@ class TestFloatPrecision(TransactionCase):
         #try_roundtrip(-2.6748955, -2.674896, '2000-01-02')
         #try_roundtrip(-10000.999999, -10000.999999, '2000-01-04')
 
+
+    def test_float_invert_16_digit_precision(self):
+        """Ensure inversion remains accurate for very small steps (e.g. 16-digit precision)."""
+        precision_rounding = 3e-16
+        # 3e-16 is intentionally absent from _INVERTDICT and uses the generic path.
+        self.assertAlmostEqual(
+            1.0 / precision_rounding,
+            float_round(1.0, precision_rounding=precision_rounding),
+            places=0,
+        )
+
     def test_float_split_05(self):
         """ Test split method with 2 digits. """
         currency = self.env.ref('base.EUR')
