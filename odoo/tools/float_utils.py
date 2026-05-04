@@ -367,7 +367,7 @@ def float_invert(value: float) -> float:
     """
     result = _INVERTDICT.get(value)
     if result is None:
-        coefficient, exponent = f'{value:.15e}'.split('e')
+        coefficient, exponent = f'{value:.17e}'.split('e')
         # invert exponent by changing sign, and coefficient by dividing by its square
         result = float(f'{coefficient}e{-int(exponent)}') / float(coefficient)**2
     return result
